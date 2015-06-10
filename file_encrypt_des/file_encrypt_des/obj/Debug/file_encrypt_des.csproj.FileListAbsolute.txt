@@ -1,0 +1,6 @@
+c:\users\welcome\documents\visual studio 2013\Projects\file_encrypt_des\file_encrypt_des\bin\file_encrypt_des.dll.config
+c:\users\welcome\documents\visual studio 2013\Projects\file_encrypt_des\file_encrypt_des\bin\file_encrypt_des.dll
+c:\users\welcome\documents\visual studio 2013\Projects\file_encrypt_des\file_encrypt_des\bin\file_encrypt_des.pdb
+c:\users\welcome\documents\visual studio 2013\Projects\file_encrypt_des\file_encrypt_des\obj\Debug\file_encrypt_des.dll
+c:\users\welcome\documents\visual studio 2013\Projects\file_encrypt_des\file_encrypt_des\obj\Debug\file_encrypt_des.pdb
+c:\users\welcome\documents\visual studio 2013\Projects\file_encrypt_des\file_encrypt_des\obj\Debug\file_encrypt_des.csprojResolveAssemblyReference.cache
