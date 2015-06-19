@@ -10,7 +10,7 @@
 namespace file_encrypt_des {
     
     
-    public partial class WebForm1 {
+    public partial class WebForm2 {
         
         /// <summary>
         /// form1 control.
@@ -22,30 +22,30 @@ namespace file_encrypt_des {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// uploading control.
+        /// upload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload uploading;
+        protected global::System.Web.UI.WebControls.FileUpload upload;
         
         /// <summary>
-        /// btn control.
+        /// btnEncrypt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn;
+        protected global::System.Web.UI.WebControls.Button btnEncrypt;
         
         /// <summary>
-        /// ext control.
+        /// btnDecrypt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ext;
+        protected global::System.Web.UI.WebControls.Button btnDecrypt;
     }
 }

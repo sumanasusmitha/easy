@@ -16,7 +16,7 @@
         <p>
     <asp:Button ID="btn" runat="server" OnClick="btn_click" Text="Encrypt" Height="22px" Width="74px" />
         </p>
-       
+       <p id="ext" runat="server">extension name</p>
     </form>
 </body>
 </html>

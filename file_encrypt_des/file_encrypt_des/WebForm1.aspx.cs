@@ -15,15 +15,7 @@ namespace file_encrypt_des
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        //protected void btn_click(object sender, EventArgs e)
-        //{
-        //    StringBuilder sb=new StringBuilder();
-        //    if(uploading.HasFile)
-        //    {
-        //       uploading.SaveAs(@"c:\Users\Welcome\Documents\" + uploading.FileName);
-        //    }
-        //}
-        //  Call this function to remove the key from memory after use for security
+        
         [System.Runtime.InteropServices.DllImport("KERNEL32.DLL", EntryPoint = "RtlZeroMemory")]
         public static extern bool ZeroMemory(IntPtr Destination, int Length);
 
@@ -52,19 +44,6 @@ namespace file_encrypt_des
             DES.Key = ASCIIEncoding.ASCII.GetBytes(sKey);
             DES.IV = ASCIIEncoding.ASCII.GetBytes(sKey);
             ICryptoTransform desencrypt = DES.CreateEncryptor();
-            //if (File.Exists(sOutputFilename))
-            //{
-            //    File.Delete(sOutputFilename);
-            //}
-
-            // Create the file. 
-            //using (FileStream fs = File.Create(sOutputFilename))
-            //{
-            //    Byte[] info = new UTF8Encoding(true).GetBytes("This is some text in the file.");
-            //    // Add some information to the file.
-            //    fs.Write(info, 0, info.Length);
-            //}
-
             CryptoStream cryptostream = new CryptoStream(fsEncrypted,
                desencrypt,
                CryptoStreamMode.Write);
@@ -76,7 +55,19 @@ namespace file_encrypt_des
             fsInput.Close();
             fsEncrypted.Close();
         }
+        static byte[] GetBytes(string str)
+        {
+            byte[] bytes = new byte[str.Length * sizeof(char)];
+            System.Buffer.BlockCopy(str.ToCharArray(), 0, bytes, 0, bytes.Length);
+            return bytes;
+        }
 
+        static string GetString(byte[] bytes)
+        {
+            char[] chars = new char[bytes.Length / sizeof(char)];
+            System.Buffer.BlockCopy(bytes, 0, chars, 0, bytes.Length);
+            return new string(chars);
+        }
         static void DecryptFile(string sInputFilename,
            string sOutputFilename,
            string sKey)
@@ -108,49 +99,46 @@ namespace file_encrypt_des
 
         protected void btn_click(object sender, EventArgs e)
         {
-            // Must be 64 bits, 8 bytes.
-            // Distribute this key to the user who will decrypt this file.
-            if(uploading.HasFile)
+            if (uploading.HasFile)
             {
                 uploading.SaveAs(@"C:\Users\Welcome\Desktop\easydoc\plain\" + uploading.FileName);
             }
+            using (StreamReader sr = new StreamReader(@"C:\Users\Welcome\Desktop\easydoc\plain\" + uploading.FileName))
+            {
+                string line = sr.ReadToEnd();
+                byte[] bytes = GetBytes(line);
+                  string x  = Convert.ToBase64String(bytes);
+                  System.IO.File.WriteAllText(@"C:\Users\Welcome\Desktop\easydoc\plain1\" + uploading.FileName, x);
+            }
+           
             string sSecretKey;
-            // string s = "bfvhgnxc";
-            // Get the Key for the file to Encrypt.
             sSecretKey = GenerateKey();
-
-            // For additional security Pin the key.
             GCHandle gch = GCHandle.Alloc(sSecretKey, GCHandleType.Pinned);
 
             // Encrypt the file.        
-            EncryptFile(@"C:\Users\Welcome\Desktop\easydoc\plain\" + uploading.FileName,
+            EncryptFile(@"C:\Users\Welcome\Desktop\easydoc\plain1\" + uploading.FileName,
                @"C:\Users\Welcome\Desktop\easydoc\encrypt\" + uploading.FileName,
                sSecretKey);
-            //Console.WriteLine("sSecretKey: {0}", sSecretKey);
-
             // Decrypt the file.
             DecryptFile(@"C:\Users\Welcome\Desktop\easydoc\encrypt\" + uploading.FileName,
                 @"C:\Users\Welcome\Desktop\easydoc\decrypt\" + uploading.FileName,
                sSecretKey);
+            using (StreamReader o=new StreamReader(@"C:\Users\Welcome\Desktop\easydoc\decrypt\" + uploading.FileName))
+            {
 
+                byte[] binary=System.Convert.FromBase64String(o.ReadToEnd());
+                string strin = GetString(binary);
+                System.IO.File.WriteAllText(@"C:\Users\Welcome\Desktop\easydoc\decrypt1\" + uploading.FileName, strin);
+
+            }
             // Remove the Key from memory. 
             ZeroMemory(gch.AddrOfPinnedObject(), sSecretKey.Length * 2);
             gch.Free();
             // Console.ReadKey();
         }
-
         private void EncryptFile(Stream stream, string p, string sSecretKey)
         {
             throw new NotImplementedException();
         }
-    }
-}
-
-
-namespace CSEncryptDecrypt
-{
-    class Class1
-    {
-        
     }
 }
