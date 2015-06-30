@@ -10,7 +10,7 @@
 namespace file_encrypt_des {
     
     
-    public partial class WebForm {
+    public partial class WebForm3 {
         
         /// <summary>
         /// form1 control.
@@ -22,30 +22,39 @@ namespace file_encrypt_des {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// uploading control.
+        /// id1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload uploading;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText id1;
         
         /// <summary>
-        /// btn control.
+        /// roll1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText roll1;
         
         /// <summary>
-        /// ext control.
+        /// name1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ext;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText name1;
+        
+        /// <summary>
+        /// update control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button update;
     }
 }

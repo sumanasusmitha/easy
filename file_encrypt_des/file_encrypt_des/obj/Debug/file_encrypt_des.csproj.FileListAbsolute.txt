@@ -3,4 +3,7 @@ c:\users\welcome\documents\visual studio 2013\Projects\file_encrypt_des\file_enc
 c:\users\welcome\documents\visual studio 2013\Projects\file_encrypt_des\file_encrypt_des\bin\file_encrypt_des.pdb
 c:\users\welcome\documents\visual studio 2013\Projects\file_encrypt_des\file_encrypt_des\obj\Debug\file_encrypt_des.dll
 c:\users\welcome\documents\visual studio 2013\Projects\file_encrypt_des\file_encrypt_des\obj\Debug\file_encrypt_des.pdb
+C:\Users\Welcome\Documents\Visual Studio 2013\Projects\file_encrypt_des\file_encrypt_des\bin\MySql.Data.Entity.EF5.dll
+C:\Users\Welcome\Documents\Visual Studio 2013\Projects\file_encrypt_des\file_encrypt_des\bin\MySql.Data.Entity.EF6.dll
+C:\Users\Welcome\Documents\Visual Studio 2013\Projects\file_encrypt_des\file_encrypt_des\bin\MySql.Fabric.Plugin.dll
 C:\Users\Welcome\documents\visual studio 2013\Projects\file_encrypt_des\file_encrypt_des\obj\Debug\file_encrypt_des.csprojResolveAssemblyReference.cache

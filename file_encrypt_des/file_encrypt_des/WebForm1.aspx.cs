@@ -13,7 +13,7 @@ using System.Text;
 
 namespace file_encrypt_des
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class WebForm : System.Web.UI.Page
     {
         
         [System.Runtime.InteropServices.DllImport("KERNEL32.DLL", EntryPoint = "RtlZeroMemory")]
