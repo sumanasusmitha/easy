@@ -91,12 +91,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="sql_csv.aspx" />
+    <Content Include="testing.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="WebForm1.aspx" />
-    <Content Include="WebForm2.aspx" />
-    <Content Include="WebForm3.aspx" />
+    <Content Include="file_en_decr.aspx" />
+    <Content Include="all_file_encrypt.aspx" />
+    <Content Include="encryptdata_sql.aspx" />
+    <Content Include="decrypt_data.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,26 +109,40 @@
     <Compile Include="sql_csv.aspx.designer.cs">
       <DependentUpon>sql_csv.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="file_en_decr.aspx.cs">
+      <DependentUpon>file_en_decr.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="file_en_decr.aspx.designer.cs">
+      <DependentUpon>file_en_decr.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="all_file_encrypt.aspx.cs">
+      <DependentUpon>all_file_encrypt.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="all_file_encrypt.aspx.designer.cs">
+      <DependentUpon>all_file_encrypt.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm3.aspx.cs">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
+    <Compile Include="encryptdata_sql.aspx.cs">
+      <DependentUpon>encryptdata_sql.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm3.aspx.designer.cs">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
+    <Compile Include="encryptdata_sql.aspx.designer.cs">
+      <DependentUpon>encryptdata_sql.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="decrypt_data.aspx.cs">
+      <DependentUpon>decrypt_data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="decrypt_data.aspx.designer.cs">
+      <DependentUpon>decrypt_data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testing.aspx.cs">
+      <DependentUpon>testing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testing.aspx.designer.cs">
+      <DependentUpon>testing.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>

@@ -27,15 +27,10 @@ namespace file_encrypt_des
         MySqlCommand cmd;
         protected string Page_Load()
         {
-            try
-            {
+            
                 connect.ConnectionString = "server=localhost;user id=root;password=A9866145009;port=8000;database=world";
                 connect.Open();
-            }
-            catch (Exception ex)
-            {
-
-            }
+            
             string htmlStr = "";
             File.Delete(@"C:\\Users\Welcome\Desktop\easydoc\test.csv");
             cmd = connect.CreateCommand();
